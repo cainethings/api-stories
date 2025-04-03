@@ -1,25 +1,30 @@
-# CakePHP 3
+# Ignore environment configuration
+.env
+config.php
 
-/vendor/*
-/config/app.php
+# Ignore vendor directory (if using Composer)
+vendor/
 
-/tmp/cache/models/*
-!/tmp/cache/models/empty
-/tmp/cache/persistent/*
-!/tmp/cache/persistent/empty
-/tmp/cache/views/*
-!/tmp/cache/views/empty
-/tmp/sessions/*
-!/tmp/sessions/empty
-/tmp/tests/*
-!/tmp/tests/empty
+# Ignore session and cache files
+*.log
+*.cache
+sessions/
+cache/
+logs/
 
-/logs/*
-!/logs/empty
+# Ignore database backups
+*.sql
+*.sqlite
 
-# CakePHP 2
+# Ignore user uploads
+uploads/
+storage/
 
-/app/tmp/*
-/app/Config/core.php
-/app/Config/database.php
-/vendors/*
+# Ignore IDE & system files
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# Ignore composer lock file (optional, if you want to regenerate on install)
+composer.lock

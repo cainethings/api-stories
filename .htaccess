@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirect requests to index.php while keeping clean URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(stories|users)/(.*)$ index.php?resource=$1&action=$2 [QSA,L]
