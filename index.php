@@ -47,7 +47,7 @@ if ($resource === 'stories') {
                 exit;
             }
             $data = json_decode(file_get_contents("php://input"), true);
-            echo json_encode(updateStory($param, $data['content'] ?? ''));
+            echo json_encode(updateStory($param, $data ?? ''));
             break;
 
         case 'delete':
